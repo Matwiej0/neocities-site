@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+<body>
+
+    <button id="themeToggle" aria-label="Toggle dark mode">
+        Switch Theme
+    </button>
+
+    <section class="box">
+
+        <header><h1>Mine personal website lol</h1></header>
+
+        <nav>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="like.html">Things i like</a></li>
+                <li><a href="hardware.html">Hardware i use</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h3>About me</h3>
+            <p>Hi! My name is Matwiej, trying to learn how to do stuff lol.</p>
+            <ul>
+                <li>Age: 16</li>
+                <li>From: Poland</li>
+                <li>My local time: <span id="time"></span></li>
+            </ul>
+        </main>
+
+        <aside>
+            <h3>Socials/Links</h3>
+            <ul>
+                <li><a href="https://discord.com/users/822801376144785408">Discord</a></li>
+                <li><a href="https://github.com/Matwiej0">Github</a></li>
+                <li><a href="https://steamcommunity.com/id/Matwiejj/">Steam</a></li>
+            </ul>
+
+        </aside>
+
+        <footer>
+            <span>Created by: <a href="about.html">Me</a></span>
+            <a href="https://neocities.org/"><img src="media/neocities.png" alt="hosted by neocities"></a>
+        </footer>
+
+    </section>
+
+    <script src="scripts/clock.js" defer></script>
+    <script src="scripts/themeToggle.js" defer></script>
+</body>
+</html>

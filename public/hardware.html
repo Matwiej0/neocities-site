@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+<body>
+
+    <button id="themeToggle" aria-label="Toggle dark mode">
+        Switch Theme
+    </button>
+
+    <section class="box">
+
+        <header><h1>Mine personal website lol</h1></header>
+
+        <nav>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="like.html">Things i like</a></li>
+                <li><a href="hardware.html">Hardware i use</a></li>
+            </ul>
+        </nav>
+
+<main>
+            <h3>Hardware I Use</h3>
+            <p>This is the current setup I use for daily tasks, gaming, and coding.</p>
+
+            <h4>The Gaming PC</h4>
+            <ul>
+                <li><strong>CPU:</strong> AMD Ryzen 5 7600X</li>
+                <li><strong>COOLER:</strong> ENDORFY Fera 5 Black ARGB 120mm</li>
+                <li><strong>MOBO:</strong> MSI B650 GAMING PLUS WIFI</li>
+                <li><strong>GPU:</strong> Gigabyte Radeon RX 7600 Gaming OC 8GB GDDR6</li>
+                <li><strong>RAM:</strong> Patriot 32GB (2x16GB) 6000MHz CL36 VIPER VENOM</li>
+                <li><strong>SSD:</strong> Lexar 1TB M.2 PCIe Gen4 NVMe NM710</li>
+                <li><strong>PSU:</strong> MSI MAG 650W 80 Plus Bronze</li>
+                <li><strong>CASE:</strong> Logic Dart Pro ARGB Midi Black</li>
+            </ul>
+
+            <h4>The Second Machine</h4>
+            <ul>
+                <li><strong>Computer:</strong> Apple Mac Mini (M4/16GB/256GB)</li>
+            </ul>
+
+            <h4>Peripherals & Audio</h4>
+            <ul>
+                <li><strong>Monitor:</strong> MSI G255PF E2</li>
+                <li><strong>Keyboard:</strong> Dark Project ALU87A Onionite V2 (G3MS Amethyst Switches)</li>
+                <li><strong>Mouse:</strong> Nubi NM1</li>
+                <li><strong>Headphones:</strong> Koss Porta Pro</li>
+                <li><strong>USB Switch:</strong> UGREEN CM662 USB 3.0 (2x4 out)</li>
+            </ul>
+        </main>
+
+        <aside>
+            <h4>Setup Info</h4>
+            <p><strong>Primary OS:</strong><br>Windows 11 & macOS</p>
+            <p><strong>KVM/Switch:</strong><br>Shared peripherals</p>
+            <p><strong>Desk Style:</strong><br>Dual Setup</p>
+        </aside>
+
+        <footer>
+            <span>Created by: <a href="about.html">Me</a></span>
+            <a href="https://neocities.org/"><img src="media/neocities.png" alt="hosted by neocities"></a>
+        </footer>
+
+    </section>
+
+    <script src="scripts/themeToggle.js" defer></script>
+</body>
+</html>

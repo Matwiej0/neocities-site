@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
 </head>
 <body>
-    <h1>hy,by</h1>
+    
+    <button id="themeToggle" aria-label="Toggle dark mode">
+        Switch Theme
+    </button>
+
+    <section class="box">
+
+        <header><h1>Mine personal website lol</h1></header>
+
+        <nav>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="like.html">Things i like</a></li>
+                <li><a href="hardware.html">Hardware i use</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h3>Welcome</h3>
+            <p>After more than a year of having this Neocities account, I finally started building my own website.</p>
+            <p>You can find information about me here, the things I like, and the hardware I use. Most of the pages are still under development, but I will update them soon.</p>
+        </main>
+
+        <aside>
+            <h3>Status</h3>
+            <p><Strong>Updated:</Strong><br>08.11.2026</p>
+            <p><strong>Mood:</strong><br>Idk</p>
+        </aside>
+
+        <footer>
+            <span>Created by: <a href="about.html">Me</a></span>
+            <a href="https://neocities.org/"><img src="media/neocities.png" alt="hosted by neocities"></a>
+        </footer>
+
+    </section>
+
+    <script src="scripts/themeToggle.js" defer></script>
 </body>
 </html>
