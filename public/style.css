@@ -5,14 +5,14 @@
 }
 
 [data-theme="light"] {
-    --bg-color: #e7dcc5;
+    --bg-color: #f3ecdc;
     --text-color: #1f1e1d;
     --bg-wall : url("media/light.png");
 }
 
 [data-theme="dark"] {
     --bg-color: #1f1e1d;
-    --text-color: #e7dcc5;
+    --text-color: #f3ecdc;
     --bg-wall : url("media/dark.png");
 }
 
