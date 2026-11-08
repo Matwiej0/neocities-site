@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    color-scheme: dark light;
+    color-scheme: light dark;
 }
 
 [data-theme="light"] {
     --bg-color: #e7dcc5;
     --text-color: #1f1e1d;
+    --bg-wall : url("media/light.png");
 }
 
 [data-theme="dark"] {
     --bg-color: #1f1e1d;
     --text-color: #e7dcc5;
+    --bg-wall : url("media/dark.png");
 }
 
 body {
     background-color: var(--bg-color);
+    background-image: var(--bg-wall);
+    background-repeat: repeat;
+      background-size: 500px auto;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -44,11 +49,30 @@ body {
 
 }
 
-header,nav,main,aside,footer {
+#themeToggle {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    cursor: pointer;
+}
+
+#themeToggle svg {
+  fill: var(--text-color);
+  width: 28px;
+  height: 28px;
+}
+
+
+header, nav, main, aside, footer {
+    background-color: var(--bg-color);
     border: var(--text-color) 2px solid;
+    border-radius: 15px;
 }
 
 header {
+    text-align: center;
     grid-area: header;
 }
 
@@ -66,7 +90,29 @@ aside {
 
 footer {
     grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+img {
+    margin: 5px;
+}
+
+h1, h3 {
+    margin: 5px;
+}
+
+p {
+    margin-left: 5px;
+}
+
+a,button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 @media (max-width: 767px) {
     .box {
