@@ -122,6 +122,9 @@ a, button {
     justify-content: center;
 }
 
+ul {
+    padding-left: 20px;
+}
 @media (max-width: 767px) {
     .box {
         display: block;
